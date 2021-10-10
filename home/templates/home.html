@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin-left: 300px;
+        margin-top: 30px;
+    }
+
+    .btn {
+        color: blue;
+        margin-left: 310px;
+    }
+
+    .out {
+        margin-left: 310px;
+        margin-top: 30px;
+    }
+
+    .hed {
+        color: rgb(27, 186, 214);
+        font-size: 3rem;
+    }
+
+    .out1 {
+        font-size: 4rem;
+        color: darkblue;
+        margin-top: -30px;
+        margin-left: 120px;
+    }
+
+    .son {
+        margin-left: 450px;
+    }
+
+    .opt {
+        margin-left: 100px;
+    }
+
+    .main {
+        margin-left: 100px;
+    }
+    .container1{
+        margin-top: 50px;
+        border: 500px;
+        
+    }
+</style>
+
+<body>
+    <div class="container1">
+        <h1 class="son">Welcome to our Calculator</h1>
+        <form class="container" action="/add" method="post">
+            {% csrf_token %}
+            <div class="main">
+                <p>1.For addition 2.For substraction 3.For multiplication 4.For division</p>
+                <p class="opt">choice option: <input type="text" name="num3"></p>
+            </div>
+
+            <br><br><br><br><br>
+            Enter first number: <input type="text" name='num1'>&nbsp&nbsp
+            Enter second number: <input type="text" name='num2'><br><br>
+            <input class="btn" type="submit" value="Result"><br>
+        </form>
+        <div class="out">
+            <p class="hed">{{remain}}</p>
+            <p class="out1"> {{output}}</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
